@@ -8,6 +8,7 @@ const api = 'https://registry.npmjs.org/';
 const dlApi = 'https://api.npmjs.org/downloads/point/last-week/';
 
 const port = process.env.PORT | 3000;
+console.log(port);
 
 app.get('/:package(*)', async (req, res) => {
 
