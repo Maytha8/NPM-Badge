@@ -12,13 +12,19 @@ const port = process.env.PORT | 3000;
 
 app.get('/:package(*)', async (req, res) => {
 
+  console.log('GET', req.path);
+
   try {
 
+    console.log('Querying registry for package', req.params.package);
     const xres = await axios.get(api+encodeURIComponent(req.params.package));
 
     if (xres.status === 200) {
       try {
+        console.log('Querying api for package', req.params.package, '(for download statistics)');
         const dlres = await axios.get(dlApi+encodeURIComponent(req.params.package));
+
+        console.log('Generating SVG and sending response');
         res.status(200)
            .header('Content-Type', 'image/svg+xml')
            .send(badge.generateBadge(
@@ -29,6 +35,7 @@ app.get('/:package(*)', async (req, res) => {
            ));
       } catch (e) {res.status(500); console.error(e.toString());}
     } else if (xres.status === 404) {
+      console.log('Package', req.params.package, 'was not found in registry');
       res.status(404);
     }
 
