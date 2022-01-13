@@ -7,7 +7,7 @@ const badge = require('./src/badge.js');
 const api = 'https://registry.npmjs.org/';
 const dlApi = 'https://api.npmjs.org/downloads/point/last-week/';
 
-const host = '0.0.0.0';
+const host = process.env.HOST | '0.0.0.0';
 const port = process.env.PORT | 3000;
 
 app.get('/:package(*)', async (req, res) => {
