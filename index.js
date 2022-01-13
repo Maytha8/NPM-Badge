@@ -45,5 +45,6 @@ app.get('/:package(*)', async (req, res) => {
 
 });
 
-app.listen(port, host);
-console.log('Server listening on', host, 'port', port);
+app.listen(port, host, () => {
+  console.log('Server listening on', host, 'port', port);
+});
