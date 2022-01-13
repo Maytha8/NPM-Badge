@@ -7,6 +7,8 @@ const badge = require('./src/badge.js');
 const api = 'https://registry.npmjs.org/';
 const dlApi = 'https://api.npmjs.org/downloads/point/last-week/';
 
+const port = process.env.PORT | 3000;
+
 app.get('/:package(*)', async (req, res) => {
 
   try {
@@ -42,5 +44,5 @@ app.get('/:package(*)', async (req, res) => {
 
 });
 
-app.listen(3000);
+app.listen(port);
 console.log('Server listening');
