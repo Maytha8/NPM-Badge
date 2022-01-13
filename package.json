@@ -4,7 +4,7 @@
   "description": "NPM package badge that works.",
   "main": "index.js",
   "scripts": {
-    "start": "node",
+    "start": "node .",
     "test": "mocha"
   },
   "repository": {
