@@ -1,0 +1,24 @@
+{
+  "name": "npm-badge",
+  "version": "0.1.0",
+  "description": "NPM package badge that works.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maytha8/NPM-Badge.git"
+  },
+  "keywords": [
+    "badge",
+    "npm",
+    "node"
+  ],
+  "author": "Maytham Alsudany <maytham.alsudany@gmail.com> (https://github.com/Maytha8)",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Maytha8/NPM-Badge/issues"
+  },
+  "homepage": "https://github.com/Maytha8/NPM-Badge#readme"
+}
